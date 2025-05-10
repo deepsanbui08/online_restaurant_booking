@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Details</title>
+    <link rel="stylesheet" href="/stylesheets/details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Image Slider Header -->
+    <section class="slider">
+        <div class="slides">
+            <img src="/images/6bally1.jpg" alt="Restaurant Image 1" class="slide active">
+            <img src="/images/6bally2.jpg" alt="Restaurant Image 2" class="slide">
+            <img src="/images/6bally.jpg" alt="Restaurant Menu" class="slide">
+        </div>
+    </section>
+
+    <!-- Restaurant Info Section -->
+    <section class="restaurant-info">
+        <h1>6 Ballygunge Place</h1>
+        <p class="short-description">Authentic Bengali cuisine served in a stunning heritage mansion with timeless charm.</p>
+
+        <div class="details-grid">
+            <div class="detail-item">
+                <h3>📍 Location</h3>
+                <p>6, Ballygunge Place, Kolkata, West Bengal 700019</p>
+            </div>
+            <div class="detail-item">
+                <h3>🍽️ Cuisine</h3>
+                <p>Bengali Traditional, Seafood Specials</p>
+            </div>
+            <div class="detail-item">
+                <h3>🕔 Opening Hours</h3>
+                <p>12:00 PM - 10:30 PM</p>
+            </div>
+            <div class="detail-item">
+                <h3>💬 Specialities</h3>
+                <p>Shorshe Ilish, Chingri Malai Curry, Kosha Mangsho</p>
+            </div>
+        </div>
+
+        <div class="actions">
+            <a href="/6ballygunge/book" class="btn">Book Now</a>
+            <a href="https://www.google.com/maps?q=6+Ballygunge+Place+Kolkata" target="_blank" class="btn">View on Map</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+          <p>&copy; 2025 <strong>Amontron</strong> | Kolkata Restaurants | Taste the Tradition</p>
+          <div class="footer-icons">
+            <a href="/"><i class="fas fa-home"></i></a> <!-- Home icon link -->
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+      </footer>
+      
+
+    <!-- Slider Script -->
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        let index = 0;
+
+        function showSlide() {
+            slides.forEach(slide => slide.classList.remove('active'));
+            index = (index + 1) % slides.length;
+            slides[index].classList.add('active');
+        }
+
+        setInterval(showSlide, 3000); // change image every 3 seconds
+    </script>
+
+</body>
+</html>

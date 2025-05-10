@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Details - Oh! Calcutta</title>
+    <link rel="stylesheet" href="/stylesheets/details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Image Slider Header -->
+    <section class="slider">
+        <div class="slides">
+            <img src="/images/ohc1.jpg" alt="Oh! Calcutta Image 1" class="slide active">
+            <img src="/images/oh2.jpg" alt="Oh! Calcutta Image 2" class="slide">
+            <img src="/images/oh3.jpg" alt="Oh! Calcutta Menu" class="slide">
+        </div>
+    </section>
+
+    <!-- Restaurant Info Section -->
+    <section class="restaurant-info">
+        <h1>Oh! Calcutta</h1>
+        <p class="short-description">A tribute to Kolkata's rich culinary legacy, celebrating classic Bengali and Anglo-Indian flavors in a fine-dining ambience.</p>
+
+        <div class="details-grid">
+            <div class="detail-item">
+                <h3>📍 Location</h3>
+                <p>Forum Mall, 10/3, Elgin Rd, Sreepally, Bhowanipore, Kolkata, West Bengal 700020</p>
+            </div>
+            <div class="detail-item">
+                <h3>🍽️ Cuisine</h3>
+                <p>Bengali, Anglo-Indian, Fusion</p>
+            </div>
+            <div class="detail-item">
+                <h3>🕔 Opening Hours</h3>
+                <p>12:00 PM - 11:00 PM</p>
+            </div>
+            <div class="detail-item">
+                <h3>💬 Specialities</h3>
+                <p>Smoked Hilsa, Railway Mutton Curry, Daab Chingri</p>
+            </div>
+        </div>
+
+        <div class="actions">
+            <a href="/ohcalcutta/book" class="btn">Book Now</a>
+            <a href="https://www.google.com/maps?q=oh+calcutta+forum+mall+kolkata" target="_blank" class="btn">View on Map</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 <strong>Amontron</strong> | Kolkata Restaurants | Taste the Tradition</p>
+            <div class="footer-icons">
+                <a href="/"><i class="fas fa-home"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-x-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Slider Script -->
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        let index = 0;
+
+        function showSlide() {
+            slides.forEach(slide => slide.classList.remove('active'));
+            index = (index + 1) % slides.length;
+            slides[index].classList.add('active');
+        }
+
+        setInterval(showSlide, 3000); // change image every 3 seconds
+    </script>
+
+</body>
+</html>

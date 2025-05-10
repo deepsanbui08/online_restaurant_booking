@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Verify OTP</title>
+  <link rel="stylesheet" href="/stylesheets/verify-otp.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="otp-container">
+    <div class="otp-box">
+      <h2>Verify Your Email</h2>
+      <p>Please enter the 6-digit code sent to your registered email.</p>
+      <form action="/forgot-password/verify" method="POST">
+        <input type="text" name="otp" maxlength="6" placeholder="Enter OTP" required />
+        <button type="submit">Verify</button>
+      </form>
+      <div class="resend-section">
+        <p class="resend">Didn't receive the code?</p>
+        <form action="/forgot-password/resend-otp" method="POST">
+          <button type="submit" class="resend-btn">Resend OTP</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script>
+    let para = document.querySelector(".resend");
+    const resend = document.querySelector(".resend-btn")
+    resend.addEventListener("click",()=>{
+      para.innerHTML=`OTP resent to your email`
+    })
+  </script>
+</body>
+</html>

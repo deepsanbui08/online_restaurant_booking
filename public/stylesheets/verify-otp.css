@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f8f9fa, #e3f2fd);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .otp-container {
+    width: 90%;
+    max-width: 400px;
+    padding: 25px;
+  }
+  
+  .otp-box {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .otp-box h2 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+  }
+  
+  .otp-box p {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+  
+  .otp-box input[type="text"] {
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+  
+  .otp-box button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .otp-box button:hover {
+    background-color: #0056b3;
+    text-decoration: underline;
+  }
+  
+  .resend-section {
+    margin-top: 20px;
+  }
+  
+  .resend-btn {
+    background-color: #007bff;
+    color: white;
+    font-weight: 600;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .resend-btn:hover {
+    text-decoration: underline;
+    background-color: #0056b3;
+  }
+  

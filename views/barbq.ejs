@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar-B-Q Restaurant Details</title>
+    <link rel="stylesheet" href="/stylesheets/details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Image Slider Header -->
+    <section class="slider">
+        <div class="slides">
+            <img src="/images/bbq2.jpg" alt="Bar-B-Q Image 1" class="slide active">
+            <img src="/images/bbq1.jpg" alt="Bar-B-Q Image 2" class="slide">
+            <img src="/images/bbq3.jpg" alt="Bar-B-Q Dishes" class="slide">
+        </div>
+    </section>
+
+    <!-- Restaurant Info Section -->
+    <section class="restaurant-info">
+        <h1>Bar-B-Q</h1>
+        <p class="short-description">Kolkata’s favorite stop for sizzling tandoori, Chinese delicacies, and nostalgic Park Street vibes.</p>
+
+        <div class="details-grid">
+            <div class="detail-item">
+                <h3>📍 Location</h3>
+                <p>43, Park Street Area, Kolkata, West Bengal 700016</p>
+            </div>
+            <div class="detail-item">
+                <h3>🍽️ Cuisine</h3>
+                <p>Indian, Chinese, Tandoori, Asian</p>
+            </div>
+            <div class="detail-item">
+                <h3>🕔 Opening Hours</h3>
+                <p>12:00 PM - 11:30 PM</p>
+            </div>
+            <div class="detail-item">
+                <h3>💬 Specialities</h3>
+                <p>Tandoori Chicken, Mixed Fried Rice, Garlic Prawns</p>
+            </div>
+        </div>
+
+        <div class="actions">
+            <a href="/barbq/book" class="btn">Book Now</a>
+            <a href="https://www.google.com/maps?q=Bar-B-Q+Kolkata" target="_blank" class="btn">View on Map</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+          <p>&copy; 2025 <strong>Amontron</strong> | Kolkata Restaurants | Taste the Tradition</p>
+          <div class="footer-icons">
+            <a href="/"><i class="fas fa-home"></i></a> <!-- Home icon link -->
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+      </footer>
+      
+
+    <!-- Slider Script -->
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        let index = 0;
+
+        function showSlide() {
+            slides.forEach(slide => slide.classList.remove('active'));
+            index = (index + 1) % slides.length;
+            slides[index].classList.add('active');
+        }
+
+        setInterval(showSlide, 3000); // change image every 3 seconds
+    </script>
+
+</body>
+</html>

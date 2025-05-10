@@ -1,0 +1,166 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fefefe;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  .profile-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  /* Profile Card */
+  .profile-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.6s ease-in;
+  }
+  
+  .avatar i {
+    font-size: 80px;
+    color: #ff6f61;
+    margin-bottom: 15px;
+  }
+  
+  .profile-card h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .profile-details p {
+    margin: 8px 0;
+    font-size: 1rem;
+    color: #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  /* Buttons */
+  .button-group {
+    margin-top: 20px;
+  }
+  
+  .btn {
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 30px;
+    margin: 10px 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+  
+  .btn.home {
+    background: #ff6f61;
+    color: white;
+  }
+  
+  .btn.logout {
+    background: #333;
+    color: white;
+  }
+  
+  .btn:hover {
+    opacity: 0.9;
+  }
+  
+  /* Bookings Section */
+  .bookings-section {
+    margin-top: 40px;
+    background: #fffdfd;
+    border-radius: 20px;
+    padding: 25px 30px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    animation: slideUp 0.7s ease-in;
+  }
+  
+  .bookings-section h2 {
+    color: #ff6f61;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+  
+  .booking-entry {
+    border-bottom: 1px solid #eee;
+    padding: 12px 0;
+  }
+  
+  .booking-entry:last-child {
+    border-bottom: none;
+  }
+  
+  .booking-entry p {
+    margin: 6px 0;
+    font-size: 0.95rem;
+  }
+  
+  .no-bookings {
+    color: #888;
+    font-style: italic;
+    text-align: center;
+  }
+  
+  /* Footer */
+  .site-footer {
+    background-color: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 18px 10px;
+    margin-top: 50px;
+    border-top: 4px solid #ff6f61;
+  }
+  
+  .footer-content p {
+    margin: 0 0 8px;
+  }
+  
+  .footer-icons a {
+    margin: 0 10px;
+    color: #ccc;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .footer-icons a:hover {
+    color: #ff6f61;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Mobile Responsive */
+  @media (max-width: 600px) {
+    .profile-card, .bookings-section {
+      padding: 20px;
+    }
+  
+    .btn {
+      display: block;
+      width: 80%;
+      margin: 8px 0 0 8px;
+    }
+  
+    .footer-icons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+  

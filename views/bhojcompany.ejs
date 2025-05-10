@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhoj Company - Restaurant Details</title>
+  <link rel="stylesheet" href="/stylesheets/details.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <section class="slider">
+    <div class="slides">
+      <img src="/images/bhoj1.jpg" alt="Bhoj Company Image 1" class="slide active">
+      <img src="/images/bhoj2.jpg" alt="Bhoj Company Image 2" class="slide">
+      <img src="/images/bhoj3.jpg" alt="Bhoj Company Image 3" class="slide">
+    </div>
+  </section>
+
+  <section class="restaurant-info">
+    <h1>Bhoj Company</h1>
+    <p class="short-description">A hidden gem for homestyle Bengali meals, famous for its affordable and flavorful thalis.</p>
+
+    <div class="details-grid">
+      <div class="detail-item">
+        <h3>📍 Location</h3>
+        <p>30, Biplabi Anukul Chandra St, Bowbazar, Kolkata, West Bengal 700072</p>
+      </div>
+      <div class="detail-item">
+        <h3>🍽️ Cuisine</h3>
+        <p>Bengali, Traditional</p>
+      </div>
+      <div class="detail-item">
+        <h3>🕔 Opening Hours</h3>
+        <p>11:00 AM - 10:00 PM</p>
+      </div>
+      <div class="detail-item">
+        <h3>💬 Specialities</h3>
+        <p>Fish Thali, Mutton Curry, Begun Bhaja</p>
+      </div>
+    </div>
+
+    <div class="actions">
+      <a href="/bhojcompany/book" class="btn">Book Now</a>
+      <a href="https://www.google.com/maps?q=bhoj+company+kolkata" target="_blank" class="btn">View on Map</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>&copy; 2025 <strong>Amontron</strong> | Kolkata Restaurants | Taste the Tradition</p>
+      <div class="footer-icons">
+        <a href="/"><i class="fas fa-home"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let index = 0;
+    function showSlide() {
+      slides.forEach(slide => slide.classList.remove('active'));
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }
+    setInterval(showSlide, 3000);
+  </script>
+
+</body>
+</html>

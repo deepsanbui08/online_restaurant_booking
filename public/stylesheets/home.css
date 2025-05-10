@@ -1,0 +1,207 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f5f5f5;
+}
+
+/* Header */
+.main-header {
+    position: relative;
+    height: 80vh;
+    background: url('/images/home.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.main-header .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.header-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.header-buttons .btn {
+    background: #ff6f61;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background 0.3s;
+}
+
+.header-buttons .btn:hover {
+    background: #e85a4f;
+}
+
+/* Search Section */
+.search-section {
+    margin: 20px;
+    text-align: center;
+}
+
+.search-bar {
+    width: 50%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+}
+
+.popular-restaurants {
+    padding: 40px 20px;
+    background: #fff;
+}
+
+.popular-restaurants h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #222;
+}
+
+/* Restaurant Grid */
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.restaurant-card {
+    background: #fafafa;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.restaurant-card:hover {
+    transform: scale(1.03);
+}
+
+.restaurant-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.restaurant-card h3 {
+    padding: 15px 10px 5px 10px;
+    font-size: 1.4rem;
+}
+
+.restaurant-card p {
+    padding: 0 10px 15px 10px;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.restaurant-card .btn {
+    display: block;
+    text-align: center;
+    margin: 10px auto 15px;
+    background: #ff6f61;
+    padding: 8px 16px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    width: fit-content;
+}
+
+.restaurant-card .btn:hover {
+    background: #e85a4f;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #222;
+    color: #ddd;
+    padding: 20px 10px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .footer-icons a {
+    color: #ddd;
+    margin: 0 10px;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-icons a:hover {
+    color: #ff6f61;
+  }
+  
+
+/* Profile Icon Styling */
+.profile-icon {
+    width: 40px; /* Default size for mobile */
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ff6f61;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 20px; /* Adjust position */
+    right: 20px; /* Adjust position */
+}
+
+.profile-icon:hover {
+    background-color: #e85a4f;
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Profile Icon for larger screens (laptop/desktop) */
+@media (min-width: 768px) {
+    .profile-icon {
+        width: 50px; /* Adjusted size for laptop */
+        height: 50px;
+        font-size: 1.5rem; /* Larger icon text for desktop */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-header {
+        height: 60vh;
+    }
+    .search-bar {
+        width: 90%;
+    }
+    .header-buttons {
+        flex-direction: column;
+    }
+    .restaurant-card img {
+        height: 180px;
+    } 
+}

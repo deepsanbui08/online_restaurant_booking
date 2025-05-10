@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Kolkata's Best Restaurants</title>
+    <link rel="stylesheet" href="/stylesheets/login.css">
+</head>
+<body>
+    <!-- Login Section -->
+    <section class="login-section">
+        <div class="overlay">
+            <h1>Welcome Back! Login</h1>
+                <form action="/login" method="POST" class="login-form">
+                <div class="form-group">
+                    <label for="mobile">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <p class="forgot-password"><a href="/forgot-password">Forgot Password?</a></p>
+            <p class="register-link">New here? <a href="/register">Register</a></p>
+        </div>
+    </section>
+    <script src="/javascripts/login.js"></script>
+</body>
+</html>

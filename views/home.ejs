@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolkata's Best Restaurants</title>
+    <link rel="stylesheet" href="/stylesheets/home.css">
+
+    <!-- Font Awesome CDN for free icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="overlay">
+            <h1>Explore Kolkata's Best Bites 🍽️</h1>
+            <p>Find your next favorite restaurant today!</p>
+        </div>
+
+        <!-- Profile Icon -->
+        <a href="#" id="profileLink" class="profile-icon" data-loggedin="<%= isLoggedIn %>">
+            <i class="fas fa-user"></i>
+        </a>
+    </header>
+
+    <!-- Search Bar Section -->
+    <section class="search-section">
+        <input type="text" placeholder="Search for a restaurant..." class="search-bar">
+    </section>
+
+    <!-- Popular Restaurants Section -->
+    <section class="popular-restaurants">
+        <h2>Popular Picks in Kolkata</h2>
+        <div class="restaurant-grid">
+            <div class="restaurant-card">
+                <img src="/images/6bally2.jpg" alt="6 Ballygunge Place">
+                <h3>6 Ballygunge Place</h3>
+                <p>Authentic Bengali cuisine in a heritage setting.</p>
+                <a href="/restaurant-details/6ballygunge" class="btn">See Details</a>
+            </div>
+            <div class="restaurant-card">
+                <img src="/images/bbq1.jpg" alt="Bar-B-Q">
+                <h3>Bar-B-Q</h3>
+                <p>Iconic spot for kebabs, Chinese and Indian flavors.</p>
+                <a href="/restaurant-details/barbq" class="btn">See Details</a>
+            </div>
+            <div class="restaurant-card">
+                <img src="/images/peter1.jpg" alt="Peter Cat">
+                <h3>Peter Cat</h3>
+                <p>Legendary for Chelo Kebabs and retro vibes.</p>
+                <a href="/restaurant-details/petercat" class="btn">See Details</a>
+            </div>
+            <div class="restaurant-card">
+                <img src="/images/bhojh1.png" alt="The Bhoj Company">
+                <h3>The Bhoj Company</h3>
+                <p>Hearty Bengali thalis and homely flavors.</p>
+                <a href="/restaurant-details/bhojcompany" class="btn">See Details</a>
+            </div>
+            <div class="restaurant-card">
+                <img src="/images/ohchh.jpg" alt="Oh! Calcutta">
+                <h3>Oh! Calcutta</h3>
+                <p>Upscale Bengali dining with nostalgic touches.</p>
+                <a href="/restaurant-details/ohcalcutta" class="btn">See Details</a>
+            </div>
+            <div class="restaurant-card">
+                <img src="/images/moch.jpg" alt="Mocambo">
+                <h3>Mocambo</h3>
+                <p>Old-world charm serving classic Continental fare.</p>
+                <a href="/restaurant-details/mocambo" class="btn">See Details</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+          <p>&copy; 2025 <strong>Amontron</strong> | Kolkata Restaurants | Taste the Tradition</p>
+          <div class="footer-icons">
+            <a href="/"><i class="fas fa-home"></i></a> <!-- Home icon link -->
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+      </footer>
+      
+      
+
+    <!-- JavaScript for Profile Redirection -->
+    <script src="/javascripts/home.js"></script>
+
+</body>
+</html>

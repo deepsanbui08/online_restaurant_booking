@@ -1,0 +1,125 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f5f5f5;
+}
+
+/* Registration Section */
+.register-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('/images/home.jpg') no-repeat center center/cover;
+    position: relative;
+    padding: 20px;  /* Added padding to prevent form from touching screen edges */
+}
+
+.register-section .overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;  /* Reduced padding to allow for more compact form */
+    border-radius: 10px;
+    width: 100%;
+    max-width: 40%;  /* Increased width to 70% of the screen */
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.register-section h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;  /* Reduced space below title */
+    color: white;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;  /* Further reduced space between form elements */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 3px;  /* Reduced space below label */
+    font-weight: bold;
+    color: white;
+}
+
+.form-group input,
+.form-group select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    margin-bottom: 8px;  /* Reduced space below inputs */
+    color: #333;
+}
+
+.btn {
+    background: #ff6f61;
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 1.1rem;
+    transition: background 0.3s;
+    width: 100%;  /* Full width button */
+}
+
+.btn:hover {
+    background: #e85a4f;
+}
+
+/* Login Link */
+.login-link {
+    margin-top: 10px;  /* Reduced space between form and link */
+    font-size: 1rem;
+}
+
+.login-link a {
+    color: #ff6f61;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .register-section h1 {
+        font-size: 1.6rem;
+    }
+
+    .form-group input,
+    .form-group select {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+
+    .login-link {
+        font-size: 0.9rem;
+    }
+
+    .register-section .overlay {
+        max-width: 90%;  /* More space for smaller screens */
+        padding: 15px;
+    }
+}

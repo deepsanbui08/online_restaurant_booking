@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peter Cat - Restaurant Details</title>
+  <link rel="stylesheet" href="/stylesheets/details.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <section class="slider">
+    <div class="slides">
+      <img src="/images/peter4.jpg" alt="Peter Cat Image 1" class="slide active">
+      <img src="/images/peter3.jpg" alt="Peter Cat Image 2" class="slide">
+      <img src="/images/peter2.jpg" alt="Peter Cat Menu" class="slide">
+    </div>
+  </section>
+
+  <section class="restaurant-info">
+    <h1>Peter Cat</h1>
+    <p class="short-description">Iconic Park Street eatery known for its colonial charm and the legendary Chelo Kebab platter.</p>
+
+    <div class="details-grid">
+      <div class="detail-item">
+        <h3>📍 Location</h3>
+        <p>18A Park St, Park Street area, Kolkata, West Bengal 700071</p>
+      </div>
+      <div class="detail-item">
+        <h3>🍽️ Cuisine</h3>
+        <p>North Indian, Continental, Mughlai</p>
+      </div>
+      <div class="detail-item">
+        <h3>🕔 Opening Hours</h3>
+        <p>12:00 PM - 10:30 PM</p>
+      </div>
+      <div class="detail-item">
+        <h3>💬 Specialities</h3>
+        <p>Chelo Kebab, Sizzlers, Mutton Biryani</p>
+      </div>
+    </div>
+
+    <div class="actions">
+      <a href="/petercat/book" class="btn">Book Now</a>
+      <a href="https://www.google.com/maps?q=peter+cat+kolkata" target="_blank" class="btn">View on Map</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>&copy; 2025 <strong>Amontron</strong> | Kolkata Restaurants | Taste the Tradition</p>
+      <div class="footer-icons">
+        <a href="/"><i class="fas fa-home"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let index = 0;
+    function showSlide() {
+      slides.forEach(slide => slide.classList.remove('active'));
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }
+    setInterval(showSlide, 3000);
+  </script>
+
+</body>
+</html>
