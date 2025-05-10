@@ -7,6 +7,7 @@ const userRoutes = require("./routes/userRoutes")
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const flash = require('connect-flash');
+const MongoStore = require('connect-mongo');
 
 app.set("view engine", "ejs")
 app.use(express.json())
@@ -32,9 +33,11 @@ app.use(session({
     secret: process.env.EXPRESS_SESSION_SECRET, // Secret key for signing the session ID cookie
     resave: false,             // Do not save session if unmodified
     saveUninitialized: false,  // Do not create session until something is stored
-    cookie: {
-        maxAge: 1000 * 60 * 60 * 24 * 10 // Set cookie expiry to 10 day
-    }
+     store: MongoStore.create({
+            mongoUrl: process.env.MONGODB_URL, // Replace with your MongoDB connection string
+            collectionName: 'sessions',
+            ttl: 14 * 24 * 60 * 60, // Expiry time: 14 days
+        })
 }));
 
 //flash messages
