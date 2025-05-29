@@ -20,33 +20,6 @@ router.get("/register",(req,res)=>{
     res.render("registration")
 });
 
-// router.post('/register', async (req, res) => {
-//     try {
-//         const { name, dob, gender, mobile, aadharNumber, password, email } = req.body;
-
-//         // Check if email already exists
-//         const existingUser = await User.findOne({ email });
-//         if (existingUser) {
-//             return res.status(400).send('Email is already in use.');
-//         }
-
-//         // Create a new user
-//         const newUser = new User({
-//             name,
-//             dob,
-//             gender,
-//             mobile,
-//             aadharNumber,
-//             password,
-//             email
-//         });
-
-//         await newUser.save();
-//         res.rend('Registration successful!');
-//     } catch (error) {
-//         res.status(500).send('Error during registration: ' + error.message);
-//     }
-// });
 
 //login page rendering
 
@@ -218,6 +191,7 @@ router.post("/:restaurantname/book", async (req, res) => {
 
         res.redirect('/profile');
     } catch (err) {
+      console.log(err);
         res.status(500).send('Error saving user: ' + err.message);
     }
 });

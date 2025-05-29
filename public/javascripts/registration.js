@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', function (e) {
         const email = document.getElementById('email').value.trim();
         const mobile = document.getElementById('mobile').value.trim();
-        const aadhar = document.getElementById('aadharNumber').value.trim();
+       // const aadhar = document.getElementById('aadharNumber').value.trim();
         const dob = document.getElementById('dob').value;
 
         if (!isValidEmail(email)) {
@@ -19,11 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        if (!isValidAadhar(aadhar)) {
-            alert("Invalid Aadhar number. Must be exactly 12 digits.");
-            e.preventDefault();
-            return;
-        }
+       
 
         if (!isValidDOB(dob)) {
             alert("You must be at least 18 years old.");
@@ -42,10 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return regex.test(mobile);
     }
 
-    function isValidAadhar(aadhar) {
-        const regex = /^\d{12}$/;
-        return regex.test(aadhar);
-    }
+    
 
     function isValidDOB(dob) {
         const birthDate = new Date(dob);
